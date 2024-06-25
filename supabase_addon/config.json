@@ -1,0 +1,31 @@
+{
+  "name": "Supabase Client",
+  "maintainer": "@jamel-86",
+  "version": "1.1.15",
+  "slug": "supabase_addon",
+  "description": "Supabase client for Home Assistant that will store your entities data.",
+  "url": "https://github.com/jamel-86/hassio_addons",
+  "arch": ["armv7", "armhf", "aarch64", "amd64", "i386"],
+  "startup": "services",
+  "apparmor": true,
+  "ingress": true,
+  "ingress_stream": true,
+  "ingress_port": 8099,
+  "panel_icon": "mdi:database-check",
+  "boot": "auto",
+  "host_network": false,
+  "options": {
+    "supabase_url": "",
+    "supabase_key": "",
+    "home_assistant_url": "",
+    "home_assistant_token": "",
+    "entities": []
+  },
+  "schema": {
+    "supabase_url": "str",
+    "supabase_key": "str",
+    "home_assistant_url": "str",
+    "home_assistant_token": "str",
+    "entities": "str"
+  }
+}

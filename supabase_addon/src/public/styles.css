@@ -1,0 +1,56 @@
+/* Base styles */
+body {
+  font-family: "Arial", sans-serif;
+}
+
+/* Light theme */
+body {
+  background-color: white;
+  color: black;
+}
+
+table th,
+table td {
+  padding: 0.75rem;
+  text-align: left;
+}
+
+/* Dark theme */
+body.dark {
+  background-color: #1a202c;
+  color: #cbd5e0;
+}
+
+table thead {
+  background-color: #f7fafc;
+  color: #4a5568;
+}
+
+body.dark table thead {
+  background-color: #2d3748;
+  color: #a0aec0;
+}
+
+table tbody tr {
+  background-color: #f7fafc;
+}
+
+body.dark table tbody tr {
+  background-color: #2d3748;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #edf2f7;
+}
+
+body.dark table tbody tr:nth-child(odd) {
+  background-color: #2a2e35;
+}
+
+table tbody tr:hover {
+  background-color: #e2e8f0;
+}
+
+body.dark table tbody tr:hover {
+  background-color: #4a5568;
+}
