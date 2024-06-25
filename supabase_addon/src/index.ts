@@ -188,7 +188,7 @@ app.get('/', (req, res) => {
 });
 
 // Endpoint to get Supabase config
-app.get('/config', (req, res) => {
+app.get('/config_settings', (req, res) => {
   res.json({ SUPABASE_URL, SUPABASE_KEY });
 });
 
