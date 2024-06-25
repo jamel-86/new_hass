@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     // Fetch Supabase configuration from the backend
-    const response = await fetch("http://localhost:8099/config");
+    const response = await fetch("/config");
     const config = await response.json();
 
     const SUPABASE_URL = config.SUPABASE_URL;
@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         <td class="py-2 px-4">${row.entity_id}</td>
         <td class="py-2 px-4">${stateHistory}</td>
         <td class="py-2 px-4">${new Date(
-          row.last_changed
-        ).toLocaleString()}</td>
+        row.last_changed
+      ).toLocaleString()}</td>
       `;
       tableBody.appendChild(tr);
     });

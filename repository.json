@@ -3,6 +3,6 @@
   "maintainer": "@jamel-86",
   "email": "jamel.nacef@gmail.com",
   "keywords": ["database", "supabase", "homeassistant", "addon"],
-  "url": "https://github.com/jamel-86/hassio_addons",
+  "url": "https://github.com/jamel-86/new_hass",
   "arch": ["armv7", "armhf", "aarch64", "amd64", "i386"]
 }
