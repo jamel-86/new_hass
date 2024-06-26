@@ -9,8 +9,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Determine API endpoint based on environment
   const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
-  const ingressPath = location.pathname.split('/')[2];
-  const apiEndpoint = isLocal ? "http://localhost:8099/config_settings" : `/api/hassio_ingress/${ingressPath}/config_settings`;
+  const apiEndpoint = isLocal ? "http://localhost:8099/config_settings" : `/config_settings`;
+
+  console.log("isLocal:", isLocal);
+  console.log("apiEndpoint:", apiEndpoint);
 
   try {
     // Fetch Supabase configuration from the backend
@@ -30,6 +32,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     const modal = document.getElementById("modal");
     const modalContent = document.getElementById("modal-content");
     const closeModal = document.getElementById("close-modal");
+
+    if (!modal || !modalContent || !closeModal) {
+      console.error("Modal elements not found in the DOM");
+      return;
+    }
 
     // Show modal with state history
     const showModal = (history) => {

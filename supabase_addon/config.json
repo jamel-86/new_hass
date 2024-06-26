@@ -1,7 +1,7 @@
 {
   "name": "Supabase Client",
   "maintainer": "@jamel-86",
-  "version": "1.1.21",
+  "version": "1.1.22",
   "slug": "supabase_addon",
   "description": "Supabase client for Home Assistant that will store your entities data.",
   "url": "https://github.com/jamel-86/new_hass",
@@ -13,7 +13,7 @@
   "ingress_port": 8099,
   "panel_icon": "mdi:database-check",
   "boot": "auto",
-  "host_network": false,
+  "host_network": true,
   "options": {
     "supabase_url": "",
     "supabase_key": "",
