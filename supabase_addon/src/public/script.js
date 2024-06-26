@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Determine API endpoint based on environment
   const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
-  const apiEndpoint = isLocal ? "http://localhost:8099/config_settings" : `/api/hassio_ingress/${location.pathname.split('/')[2]}/config_settings`;
+  const ingressPath = location.pathname.split('/')[2];
+  const apiEndpoint = isLocal ? "http://localhost:8099/config_settings" : `/api/hassio_ingress/${ingressPath}/config_settings`;
 
   try {
     // Fetch Supabase configuration from the backend
