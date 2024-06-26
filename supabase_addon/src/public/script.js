@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     // Fetch Supabase configuration from the backend
-    const response = await fetch("http://localhost:8099/config_settings");
+    const response = await fetch("http://0.0.0.0/config_settings");
     const config = await response.json();
 
     const SUPABASE_URL = config.SUPABASE_URL;
