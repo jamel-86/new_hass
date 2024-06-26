@@ -9,9 +9,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Determine API endpoint based on environment
   const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
-  const apiEndpoint = isLocal ? "http://localhost:8099/config_settings" : `/config_settings`;
+  const homeAssistantIP = window.location.hostname;
+  const apiEndpoint = isLocal ? "http://localhost:8099/config_settings" : `http://${homeAssistantIP}:8099/config_settings`;
 
   console.log("isLocal:", isLocal);
+  console.log("homeAssistantIP:", homeAssistantIP);
   console.log("apiEndpoint:", apiEndpoint);
 
   try {
